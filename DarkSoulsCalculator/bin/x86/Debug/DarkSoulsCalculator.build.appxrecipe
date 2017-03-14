@@ -334,8 +334,8 @@
     <AppxPackagedFile Include="C:\Users\Dillon\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Assets\bonfire.png">
+      <PackagePath>Assets\bonfire.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -363,6 +363,9 @@
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\DarkSoulsCalculator.xr.xml">
       <PackagePath>DarkSoulsCalculator.xr.xml</PackagePath>

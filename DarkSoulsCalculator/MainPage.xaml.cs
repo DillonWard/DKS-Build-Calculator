@@ -26,5 +26,6 @@ namespace DarkSoulsCalculator
         {
             this.InitializeComponent();
         }
+
     }
 }

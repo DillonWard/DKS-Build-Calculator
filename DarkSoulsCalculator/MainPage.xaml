@@ -7,8 +7,16 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image Stretch="Fill" Source="Assets/bonfire.png" HorizontalAlignment="Center" Width="360"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource ="Assets/bonfire.png" Stretch="Fill"></ImageBrush>
+        </Grid.Background>
+        
+        <!-- <Image Stretch="Fill" Source="Assets/bonfire.png" HorizontalAlignment="Center" Width="360"/> -->
+        
+        <Grid Margin="10,10,-10,-10">
+            <Button x:Name="startButton" FontSize="30" FontFamily="Optimus Princeps" Background="White" Content="Start"  HorizontalAlignment="Left" Margin="104,110,0,0" VerticalAlignment="Top" Height="72" Width="150"/>
+        </Grid>
 
     </Grid>
 </Page>
