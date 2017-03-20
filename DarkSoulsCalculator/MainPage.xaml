@@ -7,16 +7,28 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource ="Assets/bonfire.png" Stretch="Fill"></ImageBrush>
-        </Grid.Background>
-        
-        <!-- <Image Stretch="Fill" Source="Assets/bonfire.png" HorizontalAlignment="Center" Width="360"/> -->
-        
-        <Grid Margin="10,10,-10,-10">
-            <Button x:Name="startButton" FontSize="30" FontFamily="Optimus Princeps" Background="White" Content="Start"  HorizontalAlignment="Left" Margin="104,110,0,0" VerticalAlignment="Top" Height="72" Width="150"/>
-        </Grid>
+    <Grid Background="#151515">
+        <Image Stretch="none" Source="Assets/dkstxt.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="360" Margin="0,10,0,0" Height="95"/>
+        <Grid Margin="10,100,10,80" Background="#d6d6d6" BorderBrush= "Gray" BorderThickness="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="2*" />
+            </Grid.RowDefinitions>
+            
+        </Grid>
+        <ComboBox  x:Name="head" HorizontalAlignment="Stretch" Margin="20,120,190,0" PlaceholderText="Head"/>
+        <ComboBox x:Name="chest" HorizontalAlignment="Stretch" Margin="20,170,190,0" PlaceholderText="Chest"/>
+        <ComboBox x:Name="arms" HorizontalAlignment="Stretch" Margin="20,220,190,0" PlaceholderText="Hands"/>
+        <ComboBox x:Name="arms_Copy" HorizontalAlignment="Stretch" Margin="20,270,190,0" PlaceholderText="Legs"/>
+
+         <ComboBox x:Name="ringOne" HorizontalAlignment="Stretch" Margin="190,120,20,0" PlaceholderText="Ring"/>
+        <ComboBox x:Name="ringTwo" HorizontalAlignment="Stretch" Margin="190,170,20,0" PlaceholderText="Ring"/>
+        <ComboBox x:Name="leftHand" HorizontalAlignment="Stretch" Margin="190,220,20,0" PlaceholderText="Left Hand"/>
+        <ComboBox x:Name="rightHand" HorizontalAlignment="Stretch" Margin="190,270,20,0" PlaceholderText="Right Hand"/>
     </Grid>
+
+
 </Page>

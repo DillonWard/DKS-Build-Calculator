@@ -107,7 +107,7 @@
     <None Include="DarkSoulsCalculator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\bonfire.png" />
+    <Content Include="Assets\dkstxt.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
