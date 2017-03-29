@@ -118,7 +118,6 @@
     <Content Include="Images\physical-defence.png" />
     <Content Include="Images\physical-dmg.png" />
     <Content Include="Images\poise.png" />
-    <Content Include="Images\poison.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
