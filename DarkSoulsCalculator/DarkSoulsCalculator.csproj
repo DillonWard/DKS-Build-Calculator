@@ -107,7 +107,18 @@
     <None Include="DarkSoulsCalculator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\dkstxt.png" />
+    <Content Include="Images\dkstxt.png" />
+    <Content Include="Images\bleeding.png" />
+    <Content Include="Images\fire-defence.png" />
+    <Content Include="Images\fire-dmg.png" />
+    <Content Include="Images\lightning-defence.png" />
+    <Content Include="Images\lightning-dmg.png" />
+    <Content Include="Images\magic-defence.png" />
+    <Content Include="Images\magic-dmg.png" />
+    <Content Include="Images\physical-defence.png" />
+    <Content Include="Images\physical-dmg.png" />
+    <Content Include="Images\poise.png" />
+    <Content Include="Images\poison.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -127,6 +138,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
