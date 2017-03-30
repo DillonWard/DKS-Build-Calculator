@@ -1,6 +1,8 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
+    "MyCouch": "4.0.0",
+    "mycouch.cloudant": "4.0.0"
   },
   "frameworks": {
     "uap10.0": {}

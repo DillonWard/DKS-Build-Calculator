@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MyCouch.Requests;
+using MyCouch.Responses;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -23,22 +25,36 @@ namespace DarkSoulsCalculator
     public sealed partial class MainPage : Page
     {
 
-        public MainPage()
+        public void Connection()
         {
-            this.InitializeComponent();
-            DataContext = this;
-
-        }
-
-        public object [] Offence
-        {
-            get
+            using (var client = new MyCouch.MyCouchClient("http://localhost:5984/", "dks_db"))
             {
-                return new object[] { 0, 0, 0, 0, 0 };
+
             }
 
         }
 
+
+
+        public MainPage()
+        {
+            this.InitializeComponent();
+            DataContext = this;
+        }
+
+
+        #region Offence object
+        public object [] Offence
+            {
+                get
+                {
+                    return new object[] { 0, 0, 0, 0, 0 };
+                }
+
+            }
+        #endregion
+
+        #region Defence object
         public object [] Defence
         {
             get
@@ -46,5 +62,7 @@ namespace DarkSoulsCalculator
                 return new object[] { 0, 0, 0, 0, 0 };
             }
         }
+        #endregion
+
     }
 }
