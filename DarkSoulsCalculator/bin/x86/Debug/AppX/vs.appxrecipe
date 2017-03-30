@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-27T10:55:00.326</Modified>
+      <Modified>2017-03-30T10:28:42.624</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\DarkSoulsCalculator.exe">
       <PackagePath>entrypoint\DarkSoulsCalculator.exe</PackagePath>
-      <Modified>2017-03-27T10:54:58.867</Modified>
+      <Modified>2017-03-30T10:28:42.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -448,9 +448,49 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T22:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Assets\dkstxt.png">
-      <PackagePath>Assets\dkstxt.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\dkstxt.png">
+      <PackagePath>Images\dkstxt.png</PackagePath>
       <Modified>2017-03-20T13:02:04.686</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\bleeding.png">
+      <PackagePath>Images\bleeding.png</PackagePath>
+      <Modified>2017-03-27T11:08:06.907</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\fire-defence.png">
+      <PackagePath>Images\fire-defence.png</PackagePath>
+      <Modified>2017-03-27T11:08:20.184</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\fire-dmg.png">
+      <PackagePath>Images\fire-dmg.png</PackagePath>
+      <Modified>2017-03-27T11:08:06.911</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\lightning-defence.png">
+      <PackagePath>Images\lightning-defence.png</PackagePath>
+      <Modified>2017-03-27T11:08:20.188</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\lightning-dmg.png">
+      <PackagePath>Images\lightning-dmg.png</PackagePath>
+      <Modified>2017-03-27T11:08:06.914</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\magic-defence.png">
+      <PackagePath>Images\magic-defence.png</PackagePath>
+      <Modified>2017-03-27T11:08:20.191</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\magic-dmg.png">
+      <PackagePath>Images\magic-dmg.png</PackagePath>
+      <Modified>2017-03-27T11:08:06.921</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\physical-defence.png">
+      <PackagePath>Images\physical-defence.png</PackagePath>
+      <Modified>2017-03-27T11:08:20.171</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\physical-dmg.png">
+      <PackagePath>Images\physical-dmg.png</PackagePath>
+      <Modified>2017-03-27T11:08:06.924</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Images\poise.png">
+      <PackagePath>Images\poise.png</PackagePath>
+      <Modified>2017-03-27T11:08:20.174</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -492,20 +532,20 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\DarkSoulsCalculator.xr.xml">
       <PackagePath>DarkSoulsCalculator.xr.xml</PackagePath>
-      <Modified>2017-03-27T10:54:58.341</Modified>
+      <Modified>2017-03-30T10:28:42.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2017-03-14T15:06:09.742</Modified>
+      <Modified>2017-03-30T10:02:25.994</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-27T10:54:59.902</Modified>
+      <Modified>2017-03-30T10:28:42.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\Core\DarkSoulsCalculator.exe">
       <PackagePath>DarkSoulsCalculator.exe</PackagePath>
-      <Modified>2017-03-27T10:55:00.313</Modified>
+      <Modified>2017-03-30T10:28:42.619</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

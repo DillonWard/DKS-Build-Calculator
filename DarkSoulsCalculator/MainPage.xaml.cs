@@ -22,10 +22,29 @@ namespace DarkSoulsCalculator
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
         public MainPage()
         {
             this.InitializeComponent();
+            DataContext = this;
+
         }
 
+        public object [] Offence
+        {
+            get
+            {
+                return new object[] { 0, 0, 0, 0, 0 };
+            }
+
+        }
+
+        public object [] Defence
+        {
+            get
+            {
+                return new object[] { 0, 0, 0, 0, 0 };
+            }
+        }
     }
 }
