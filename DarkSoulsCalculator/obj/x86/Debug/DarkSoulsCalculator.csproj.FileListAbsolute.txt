@@ -190,3 +190,6 @@ C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSo
 C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\MyCouch.Pcl.dll
+C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\MyCouch.Cloudant.Pcl.dll
+C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\Newtonsoft.Json.dll

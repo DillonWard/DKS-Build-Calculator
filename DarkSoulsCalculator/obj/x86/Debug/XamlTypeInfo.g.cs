@@ -132,21 +132,15 @@ namespace DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[3];
             _typeNameTable[0] = "DarkSoulsCalculator.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Object[]";
-            _typeNameTable[4] = "System.Array";
-            _typeNameTable[5] = "Object";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[3];
             _typeTable[0] = typeof(global::DarkSoulsCalculator.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::System.Object[]);
-            _typeTable[4] = typeof(global::System.Array);
-            _typeTable[5] = typeof(global::System.Object);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -196,8 +190,6 @@ namespace DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo
             case 0:   //  DarkSoulsCalculator.MainPage
                 userType = new global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
-                userType.AddMemberName("Offence");
-                userType.AddMemberName("Defence");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -209,57 +201,16 @@ namespace DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
-
-            case 3:   //  Object[]
-                userType = new global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Array"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 4:   //  System.Array
-                userType = new global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                xamlType = userType;
-                break;
-
-            case 5:   //  Object
-                xamlType = new global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
             }
             return xamlType;
         }
 
 
-        private object get_0_MainPage_Offence(object instance)
-        {
-            var that = (global::DarkSoulsCalculator.MainPage)instance;
-            return that.Offence;
-        }
-        private object get_1_MainPage_Defence(object instance)
-        {
-            var that = (global::DarkSoulsCalculator.MainPage)instance;
-            return that.Defence;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlMember xamlMember = null;
-            global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "DarkSoulsCalculator.MainPage.Offence":
-                userType = (global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DarkSoulsCalculator.MainPage");
-                xamlMember = new global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlMember(this, "Offence", "Object[]");
-                xamlMember.Getter = get_0_MainPage_Offence;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "DarkSoulsCalculator.MainPage.Defence":
-                userType = (global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DarkSoulsCalculator.MainPage");
-                xamlMember = new global::DarkSoulsCalculator.DarkSoulsCalculator_XamlTypeInfo.XamlMember(this, "Defence", "Object[]");
-                xamlMember.Getter = get_1_MainPage_Defence;
-                xamlMember.SetIsReadOnly();
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
     }
