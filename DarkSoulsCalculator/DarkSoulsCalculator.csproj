@@ -98,7 +98,10 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Defence.cs" />
+    <Compile Include="Models\Offence.cs" />
     <Compile Include="MyCouch\Client.cs" />
+    <Compile Include="Parser\JSonParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
