@@ -1,12 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Defence" />
-    <RootPropertyPathName Name="totalPoise" />
-    <RootPropertyPathName Name="totalFireDefence" />
-    <RootPropertyPathName Name="totalLightningDefence" />
-    <RootPropertyPathName Name="totalMagicDefence" />
-    <RootPropertyPathName Name="totalPhysicalDefence" />
+    <RootPropertyPathName Name="OffenceStats" />
+    <RootPropertyPathName Name="DefenceStats" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -45,6 +41,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Height" />
+      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -62,9 +59,9 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="DarkSoulsCalculator.MainPage" />

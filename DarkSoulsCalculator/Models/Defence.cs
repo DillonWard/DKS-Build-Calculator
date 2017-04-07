@@ -16,14 +16,7 @@ namespace DarkSoulsCalculator.Models
         public double fireDefence { get; set; }
         public double lightningDefence { get; set; }
         public double poise { get; set; }
-
-        public double totalPhysicalDefence = 0;
-        public double totalMagicDefence = 0;
-        public double totalFireDefence = 0;
-        public double totalLightningDefence = 0;
-        public double totalPoise = 0;
-
-
+        
     }
     #endregion
 }

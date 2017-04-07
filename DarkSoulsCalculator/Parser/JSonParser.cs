@@ -115,8 +115,8 @@ namespace DarkSoulsCalculator.Parser
                             break;
                     }
 
-                    tempList.Add(offence);
                 }
+                tempList.Add(offence);
             }
 
             return tempList;

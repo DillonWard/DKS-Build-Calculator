@@ -36,13 +36,23 @@ namespace DarkSoulsCalculator
         JSonParser parser;
         List<Defence> defItems;
         List<Offence> offItems;
+        List<HeadItems> headItems;
+        List<ChestItems> chestItems;
+        List<HandItems> handItems;
+        List<LegItems> legItems;
+        List<HeldItems> heldItems;
 
-       public MainPage()
+
+        public MainPage()
         {
+            headItems = new List<HeadItems>();
+            chestItems = new List<ChestItems>();
+            handItems = new List<HandItems>();
+            legItems = new List<LegItems>();
+            heldItems = new List<HeldItems>();
             parser = new JSonParser();
             defItems = new List<Defence>();
-            offItems = new List<Offence>();
-
+            offItems = new List<Offence>();            
             this.InitializeComponent();
             DataContext = this;
             data();
@@ -51,23 +61,47 @@ namespace DarkSoulsCalculator
         #region data()
         async void data()
         {
-
             var requestDef = await client.GetAsync("http://localhost:8080/dksItems/get-armor");
-            //var requestOff = await client.GetAsync("https://couchdb-68effd.smileupps.com/dks-calc-off/_all_docs");
+            var requestOff = await client.GetAsync("http://localhost:8080/dksItems/get-weapons");
 
             string responseDef = await requestDef.Content.ReadAsStringAsync();
-        //    string responseOff = await requestOff.Content.ReadAsStringAsync();            
+            string responseOff = await requestOff.Content.ReadAsStringAsync();            
 
             defItems = parser.parseDefense(JsonArray.Parse(responseDef));
+            offItems = parser.parseOffence(JsonArray.Parse(responseOff));
 
             foreach (var item in defItems)
             {
-                Debug.Write("\n Item: " + item.armorName.ToString());
-            }
-            
-          //  offItems = parser.parseOffence(JsonArray.Parse(responseOff));
+                Debug.Write("\n Armor: " + item.armorName + "\n Physical Defence: " + item.physicalDefence + "\n Fire Defence: " + item.fireDefence + "\n Magical Defence: " + item.magicDefence + "\n Lightning Defence: " + item.lightningDefence + "\n Poise: " + item.poise);
+                switch (item.armorType.ToString())
+                {
+                    case "Chest":
+                        chestItems.Add( new ChestItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise));
+                        break;
 
+                    case "Helm":
+                        headItems.Add(new HeadItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise));
+                        break;
+
+                    case "Hands":
+                        handItems.Add(new HandItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise));
+                        break;
+
+                    case "Legs":
+                        legItems.Add(new LegItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise));
+                        break;
+
+                }
+            }
+
+            foreach (var wep in offItems)
+            {
+                heldItems.Add(new HeldItems(wep.weaponName, wep.physicalOffence, wep.fireOffence, wep.magicOffence, wep.lightningOffence, wep.bleedOffence));
+                Debug.Write("\n Weapon Name: " + wep.weaponName + "\n Physical Offence: " + wep.physicalOffence + "\n Fire Offence: " + wep.fireOffence + "\n Magic Offence: " + wep.magicOffence + "\n Lightning Offence: " + wep.lightningOffence + "\n Bleed Offence: " + wep.bleedOffence);
+            }
         }
         #endregion 
+
+
     }
 }

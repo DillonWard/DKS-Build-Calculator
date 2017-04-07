@@ -95,12 +95,16 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\ChestItems.cs" />
+    <Compile Include="Models\HeldItems.cs" />
+    <Compile Include="Models\LegItems.cs" />
+    <Compile Include="Models\HandItems.cs" />
+    <Compile Include="Models\HeadItems.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Defence.cs" />
     <Compile Include="Models\Offence.cs" />
-    <Compile Include="MyCouch\Client.cs" />
     <Compile Include="Parser\JSonParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
