@@ -26,8 +26,5 @@ namespace DarkSoulsCalculator.Models
             this.poise = poise;
 
         }
-
     }
-
-
 }

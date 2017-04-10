@@ -32,47 +32,65 @@ namespace DarkSoulsCalculator
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        #region creating instances
         private static readonly HttpClient client = new HttpClient();
         public string returnedJson;
         JSonParser parser;
         List<Defence> defItems;
         List<Offence> offItems;
-        List<HeadItems> headItems;
-        List<ChestItems> chestItems;
-        List<HandItems> handItems;
-        List<LegItems> legItems;
-        List<HeldItems> heldItems;
-        ObservableCollection<String> headList;
-        ObservableCollection<String> chestList;
-        ObservableCollection<String> handsList;
-        ObservableCollection<String> lHandList;
-        ObservableCollection<String> rHandList;
-        ObservableCollection<String> legList;
+        List<HeadItems> headList;
+        List<ChestItems> chestList;
+        List<HandItems> handsList;
+        List<HeldItems> lHandList;
+        List<HeldItems> rHandList;
+        List<LegItems> legList;
+        #endregion
+
         public MainPage()
         {
-            headList = new ObservableCollection<String>();
-            chestList = new ObservableCollection<String>();
-            handsList = new ObservableCollection<String>();
-            lHandList = new ObservableCollection<String>();
-            rHandList = new ObservableCollection<String>();
-            legList = new ObservableCollection<String>();
+            
+            #region initializing
+            headList = new List<HeadItems>();
+            chestList = new List<ChestItems>();
+            handsList = new List<HandItems>();
+            lHandList = new List<HeldItems>();
+            rHandList = new List<HeldItems>();
+            legList = new List<LegItems>();
+            /*
             headItems = new List<HeadItems>();
             chestItems = new List<ChestItems>();
             handItems = new List<HandItems>();
             legItems = new List<LegItems>();
             heldItems = new List<HeldItems>();
+            */
             parser = new JSonParser();
             defItems = new List<Defence>();
-            offItems = new List<Offence>();            
+            offItems = new List<Offence>();
+            #endregion
+
             this.InitializeComponent();
             DataContext = this;
             data();
         }
 
-    #region data()
     async void data()
         {
-             // requests are made to the databases
+            #region Totals
+            // totals which are calculated based off of items picked
+            int physDefTotal = 0;
+            int fireDefTotal = 0;
+            int lightDefTotal = 0;
+            int magicDefTotal = 0;
+            int poiseTotal = 0;
+
+            int physAtkTotal = 0;
+            int fireAtkTotal = 0;
+            int lightAtkTotal = 0;
+            int magicAtkTotal = 0;
+            int bleedTotal = 0;
+            #endregion
+
+            // requests are made to the databases
             var requestDef = await client.GetAsync("http://localhost:8080/dksItems/get-armor");
             var requestOff = await client.GetAsync("http://localhost:8080/dksItems/get-weapons");
 
@@ -92,61 +110,49 @@ namespace DarkSoulsCalculator
                  *  they are also added to observable collections
                  */
                 Debug.Write("\n Armor: " + item.armorName + "\n Physical Defence: " + item.physicalDefence + "\n Fire Defence: " + item.fireDefence + "\n Magical Defence: " + item.magicDefence + "\n Lightning Defence: " + item.lightningDefence + "\n Poise: " + item.poise);
+               
+                #region breaking items into sections
                 switch (item.armorType.ToString())
                 {
                     case "Chest":
                         var newChestItems = new ChestItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise);
-                        chestItems.Add(newChestItems); // adding the new item to chestItems or 'ChestItems' class
-                        chestList.Add(newChestItems.name); // adding it to list so it can be used in an observable collection
+                        chestList.Add(newChestItems); // adding the new item to chestItems or 'ChestItems' class
+                        //chestList.Add(newChestItems.name); // adding it to list so it can be used in an observable collection
+
                         break;
 
                     case "Helm":
                         var newHeadItems = new HeadItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise);
-                        headItems.Add(newHeadItems);
-                        headList.Add(newHeadItems.name);
+                        headList.Add(newHeadItems);
+
+                        // headList.Add(headItems);
                         break;
 
                     case "Arms":
                         var newHandsItem = new HandItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise);
-                        handItems.Add(newHandsItem);
-                        handsList.Add(newHandsItem.name);
+                        handsList.Add(newHandsItem);
                         break;
 
                     case "Legs":
                        var newLegItem = new LegItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise);
-                        legItems.Add(newLegItem);
-                        legList.Add(newLegItem.name);
+                        legList.Add(newLegItem);
                         break;
-
                 }
-
+                #endregion
             }
 
+            #region storing weapons
             foreach (var wep in offItems)
             {
                 // adds items read in to 'HeldItems' list
                 var newWeapon = new HeldItems(wep.weaponName, wep.physicalOffence, wep.fireOffence, wep.magicOffence, wep.lightningOffence, wep.bleedOffence);
-                heldItems.Add(newWeapon);
-                rHandList.Add(newWeapon.name); // adds to observable collection
-                lHandList.Add(newWeapon.name);
+                rHandList.Add(newWeapon); // adds to observable collection
+                lHandList.Add(newWeapon);
                 Debug.Write("\n Weapon Name: " + wep.weaponName + "\n Physical Offence: " + wep.physicalOffence + "\n Fire Offence: " + wep.fireOffence + "\n Magic Offence: " + wep.magicOffence + "\n Lightning Offence: " + wep.lightningOffence + "\n Bleed Offence: " + wep.bleedOffence);
-                
-            }     
+            }
+            #endregion
 
-            #region Totals
-            // totals which are calculated based off of items picked
-            int physDefTotal = 0;
-            int fireDefTotal = 0;
-            int lightDefTotal = 0;
-            int magicDefTotal = 0;
-            int poiseTotal = 0;
-
-            int physAtkTotal = 0;
-            int fireAtkTotal = 0;
-            int lightAtkTotal = 0;
-            int magicAtkTotal = 0;
-            int bleedTotal = 0;
-
+            #region making variables visible on form
             // makes the variables visible 
             physDef.Text = physDefTotal.ToString();
             fireDef.Text = fireDefTotal.ToString();
@@ -161,17 +167,24 @@ namespace DarkSoulsCalculator
             bleedAtk.Text = bleedTotal.ToString();
             #endregion
 
+            #region Binding to dropdown boxes
             // binds the source for the dropdown as the observable collections
             headDropdown.ItemsSource = headList;
+            headDropdown.DisplayMemberPath = "name";
             chestDropdown.ItemsSource = chestList;
+            chestDropdown.DisplayMemberPath = "name";
             armsDropdown.ItemsSource = handsList;
+            armsDropdown.DisplayMemberPath = "name";
             legsDropdown.ItemsSource = legList;
+            legsDropdown.DisplayMemberPath = "name";
             leftHandDropdown.ItemsSource = rHandList;
+            leftHandDropdown.DisplayMemberPath = "name";
             rightHandDropdown.ItemsSource = lHandList;
+            rightHandDropdown.DisplayMemberPath = "name";
+            #endregion
 
-
-            
         }
-        #endregion
+
     }
+
 }
