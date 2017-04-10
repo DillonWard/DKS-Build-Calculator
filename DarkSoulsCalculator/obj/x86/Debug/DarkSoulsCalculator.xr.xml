@@ -1,8 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="OffenceStats" />
-    <RootPropertyPathName Name="DefenceStats" />
+    <RootPropertyPathName Name="totalBleedOff" />
+    <RootPropertyPathName Name="totalFireOff" />
+    <RootPropertyPathName Name="totalLightOff" />
+    <RootPropertyPathName Name="totalMagicOff" />
+    <RootPropertyPathName Name="totalPhysOff" />
+    <RootPropertyPathName Name="poiseTotal" />
+    <RootPropertyPathName Name="fireDefTotal" />
+    <RootPropertyPathName Name="lightDefTotal" />
+    <RootPropertyPathName Name="magicDefTotal" />
+    <RootPropertyPathName Name="physDefTotal" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">

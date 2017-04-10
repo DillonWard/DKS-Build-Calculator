@@ -15,7 +15,7 @@ namespace DarkSoulsCalculator.Models
             public double lightning { get; set; }
             public double poise { get; set; }
 
-
+        // Constructor
         public ChestItems(String name, double physical, double fire, double magic, double lightning, double poise)
         {
             this.name = name;
@@ -24,7 +24,6 @@ namespace DarkSoulsCalculator.Models
             this.magic = magic;
             this.lightning = lightning;
             this.poise = poise;
-
 
         }
 

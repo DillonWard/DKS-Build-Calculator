@@ -12,10 +12,12 @@ namespace DarkSoulsCalculator.Parser
     {
         public List<Defence> parseDefense(JsonArray tempDef)
         {
+            // a temporary list is initialized for storing items read in
             List<Defence> tempList = new List<Defence>();
 
             foreach(var item in tempDef)
             {
+                // objects are read in and stored in obj
                 var obj = item.GetObject();
 
                 Defence defence = new Defence();
@@ -27,6 +29,9 @@ namespace DarkSoulsCalculator.Parser
                     if (!obj.TryGetValue(key, out val))
                         continue;
 
+                    // the keys are read in and stored based on how the JSon is read in
+                    // the JSon contains keys such as "itemName", and "itemType" and are stored accordingly
+                    // they are stored into the Defence list as items
                     switch(key)
                     {
                         case "itemName":
@@ -60,6 +65,7 @@ namespace DarkSoulsCalculator.Parser
 
                    
                 } // inner loop 
+                // the temp items are added to the Defence list
                 tempList.Add(defence);
             } // outter loop
 
