@@ -56,13 +56,6 @@ namespace DarkSoulsCalculator
             lHandList = new List<HeldItems>();
             rHandList = new List<HeldItems>();
             legList = new List<LegItems>();
-            /*
-            headItems = new List<HeadItems>();
-            chestItems = new List<ChestItems>();
-            handItems = new List<HandItems>();
-            legItems = new List<LegItems>();
-            heldItems = new List<HeldItems>();
-            */
             parser = new JSonParser();
             defItems = new List<Defence>();
             offItems = new List<Offence>();
@@ -107,7 +100,6 @@ namespace DarkSoulsCalculator
                 /* Items are read in and are parsed
                  *  after the items are parsed, they are broken down into categories based on their armor 'type'
                  *  they are added to seperate lists depending on their 'type', which is read in and changed to string
-                 *  they are also added to observable collections
                  */
                 Debug.Write("\n Armor: " + item.armorName + "\n Physical Defence: " + item.physicalDefence + "\n Fire Defence: " + item.fireDefence + "\n Magical Defence: " + item.magicDefence + "\n Lightning Defence: " + item.lightningDefence + "\n Poise: " + item.poise);
                
@@ -117,15 +109,12 @@ namespace DarkSoulsCalculator
                     case "Chest":
                         var newChestItems = new ChestItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise);
                         chestList.Add(newChestItems); // adding the new item to chestItems or 'ChestItems' class
-                        //chestList.Add(newChestItems.name); // adding it to list so it can be used in an observable collection
 
                         break;
 
                     case "Helm":
                         var newHeadItems = new HeadItems(item.armorName, item.physicalDefence, item.fireDefence, item.magicDefence, item.lightningDefence, item.poise);
                         headList.Add(newHeadItems);
-
-                        // headList.Add(headItems);
                         break;
 
                     case "Arms":
