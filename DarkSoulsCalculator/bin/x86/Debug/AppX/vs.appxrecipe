@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-10T14:11:30.154</Modified>
+      <Modified>2017-04-12T12:46:46.315</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\DarkSoulsCalculator.exe">
       <PackagePath>entrypoint\DarkSoulsCalculator.exe</PackagePath>
-      <Modified>2017-04-10T14:11:29.931</Modified>
+      <Modified>2017-04-12T12:46:46.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -557,7 +557,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Debug\Core\DarkSoulsCalculator.exe">
       <PackagePath>DarkSoulsCalculator.exe</PackagePath>
-      <Modified>2017-04-10T14:11:30.148</Modified>
+      <Modified>2017-04-12T12:46:46.311</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

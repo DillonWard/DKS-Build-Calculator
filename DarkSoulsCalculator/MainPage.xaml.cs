@@ -84,8 +84,8 @@ namespace DarkSoulsCalculator
             #endregion
 
             // requests are made to the databases
-            var requestDef = await client.GetAsync("http://localhost:8080/dksItems/get-armor");
-            var requestOff = await client.GetAsync("http://localhost:8080/dksItems/get-weapons");
+            var requestDef = await client.GetAsync("http://52.11.81.164:8080/dksItems/get-armor");
+            var requestOff = await client.GetAsync("http://52.11.81.164:8080/dksItems/get-weapons");
 
             // the response from the database is read in
             string responseDef = await requestDef.Content.ReadAsStringAsync();
@@ -172,6 +172,8 @@ namespace DarkSoulsCalculator
             rightHandDropdown.DisplayMemberPath = "name";
             #endregion
 
+
+            
         }
 
     }
