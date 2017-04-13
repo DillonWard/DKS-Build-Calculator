@@ -24,7 +24,11 @@ namespace DarkSoulsCalculator.Models
             this.lightning = lightning;
             this.bleed = bleed;
 
+        }
 
+        public override string ToString()
+        {
+            return "" + physical + "," + fire + "," + magic + "," + lightning + "," + bleed;
         }
     }
 }

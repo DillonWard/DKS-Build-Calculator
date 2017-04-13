@@ -26,5 +26,10 @@ namespace DarkSoulsCalculator.Models
 
 
         }
+
+        public override string ToString()
+        {
+            return ""+physical+","+fire+","+magic+","+lightning+","+poise;
+        }
     }
 }

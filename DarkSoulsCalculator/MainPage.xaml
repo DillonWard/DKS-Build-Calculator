@@ -10,8 +10,8 @@
 
     <Grid Background="#151515">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="107*"/>
-            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="74*"/>
@@ -33,58 +33,58 @@
 
         <!--#region Dropdowns-->
 
-        <ComboBox  x:Name="headDropdown" HorizontalAlignment="Stretch" Margin="20,120,44,0" PlaceholderText="Head"/>
-        <ComboBox x:Name="chestDropdown" HorizontalAlignment="Stretch" Margin="20,170,44,0" PlaceholderText="Chest"/>
-        <ComboBox x:Name="armsDropdown" HorizontalAlignment="Stretch" Margin="20,220,44,0" PlaceholderText="Hands"/>
-        <ComboBox x:Name="legsDropdown" HorizontalAlignment="Stretch" Margin="190,120,20,0" PlaceholderText="Legs" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="leftHandDropdown" HorizontalAlignment="Stretch" Margin="190,170,20,0" PlaceholderText="Left Hand" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="rightHandDropdown" HorizontalAlignment="Stretch" Margin="190,220,20,0" PlaceholderText="Right Hand" Grid.ColumnSpan="2"/>
+        <ComboBox  x:Name="headDropdown" HorizontalAlignment="Stretch" Margin="20,120,0,0" PlaceholderText="Head" Height="32"/>
+        <ComboBox x:Name="chestDropdown" HorizontalAlignment="Stretch" Margin="20,170,0,0" PlaceholderText="Chest" Height="32"/>
+        <ComboBox x:Name="armsDropdown" HorizontalAlignment="Stretch" Margin="20,220,0,0" PlaceholderText="Hands" Height="32"/>
+        <ComboBox x:Name="legsDropdown" HorizontalAlignment="Stretch" Margin="7,120,20,0" PlaceholderText="Legs" Grid.Column="1" Height="32"/>
+        <ComboBox x:Name="leftHandDropdown" HorizontalAlignment="Stretch" Margin="7,170,20,0" PlaceholderText="Left Hand" Grid.Column="1" Height="32"/>
+        <ComboBox x:Name="rightHandDropdown" HorizontalAlignment="Stretch" Margin="7,220,20,0" PlaceholderText="Right Hand" Grid.Column="1" Height="32"/>
         <!--#endregion-->
 
         <!--#region Defence-->
-        <Rectangle HorizontalAlignment="Stretch" Fill="#e0e0e0" Margin="20,274,39,44"/>
-        <Rectangle HorizontalAlignment="Stretch" Fill="#d1d1d1" Margin="20,274,39,294"/>
+        <Rectangle HorizontalAlignment="Stretch" Fill="#e0e0e0" Margin="20,274,0,44"/>
+        <Rectangle HorizontalAlignment="Stretch" Fill="#d1d1d1" Margin="20,274,0,294"/>
         <Image Stretch="none" Source="Images/physical-defence.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="25,310,0,0" Height="31"/>
         <Image Stretch="none" Source="Images/magic-defence.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="25,360,0,0" Height="31"/>
         <Image Stretch="none" Source="Images/lightning-defence.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="25,410,0,0" Height="31"/>
         <Image Stretch="none" Source="Images/fire-defence.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="25,460,0,0" Height="31"/>
         <Image Stretch="none" Source="Images/poise.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="25,510,0,0" Height="31"/>
 
-        <TextBlock x:Name="textBlock" Margin="61,274,0,0"  Text="Defence" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy1" Margin="63,315,0,0"  Text="Physical" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy2" Margin="63,365,0,0"  Text="Magic" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy3" Margin="63,415,0,0"  Text="Lightning" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy4" Margin="63,465,0,0"  Text="Fire" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy5" Margin="63,515,0,0"  Text="Poise" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.461,-1.333"/>
+        <TextBlock x:Name="textBlock" Margin="61,274,0,0"  Text="Defence" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="20"/>
+        <TextBlock x:Name="textBlock_Copy1" Margin="63,315,0,0"  Text="Physical" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="60"/>
+        <TextBlock x:Name="textBlock_Copy2" Margin="63,365,0,0"  Text="Magic" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="60"/>
+        <TextBlock x:Name="textBlock_Copy3" Margin="63,415,0,0"  Text="Lightning" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="63"/>
+        <TextBlock x:Name="textBlock_Copy4" Margin="63,465,0,0"  Text="Fire" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="60"/>
+        <TextBlock x:Name="textBlock_Copy5" Margin="63,515,0,0"  Text="Poise" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.461,-1.333" Height="20" Width="60"/>
 
-        <TextBlock x:Name="physDef" HorizontalAlignment="Left" Margin="151,315,0,0" TextWrapping="Wrap" Text="{Binding physDefTotal}" VerticalAlignment="Top" Width="19" Height="20"/>
-        <TextBlock x:Name="magicDef" HorizontalAlignment="Left" Margin="151,365,0,0" TextWrapping="Wrap" Text="{Binding magicDefTotal}" VerticalAlignment="Top" Width="19" Height="20"/>
-        <TextBlock x:Name="lightDef" HorizontalAlignment="Left" Margin="151,415,0,0" TextWrapping="Wrap" Text="{Binding lightDefTotal}" VerticalAlignment="Top" Width="19" Height="20"/>
-        <TextBlock x:Name="fireDef" HorizontalAlignment="Left" Margin="151,465,0,0" TextWrapping="Wrap" Text="{Binding fireDefTotal}" VerticalAlignment="Top" Width="19" Height="20"/>
-        <TextBlock x:Name="poise" HorizontalAlignment="Left" Margin="151,515,0,0" TextWrapping="Wrap" Text="{Binding poiseTotal}" VerticalAlignment="Top" Width="19" Height="20"/>
+        <TextBlock x:Name="physDef" HorizontalAlignment="Left" Margin="150,315,0,0" TextWrapping="Wrap" Text="{Binding physDefTotal}" VerticalAlignment="Top" Width="19" Height="20" RenderTransformOrigin="0.404,0.517"/>
+        <TextBlock x:Name="magicDef" HorizontalAlignment="Left" Margin="150,365,0,0" TextWrapping="Wrap" Text="{Binding magicDefTotal}" VerticalAlignment="Top" Width="19" Height="20"/>
+        <TextBlock x:Name="lightDef" HorizontalAlignment="Left" Margin="150,415,0,0" TextWrapping="Wrap" Text="{Binding lightDefTotal}" VerticalAlignment="Top" Width="19" Height="20"/>
+        <TextBlock x:Name="fireDef" HorizontalAlignment="Left" Margin="150,465,0,0" TextWrapping="Wrap" Text="{Binding fireDefTotal}" VerticalAlignment="Top" Width="19" Height="20" RenderTransformOrigin="-0.649,0.55"/>
+        <TextBlock x:Name="poise" Margin="150,515,0,0" Width="19" TextWrapping="Wrap" Text="{Binding poiseTotal}" VerticalAlignment="Top" Height="20" HorizontalAlignment="Left"/>
         <!--#endregion-->
 
         <!--#region Offence-->
-        <Rectangle HorizontalAlignment="Stretch" Fill="#e0e0e0" Margin="185,274,20,44" Grid.ColumnSpan="2"/>
-        <Rectangle HorizontalAlignment="Stretch" Fill="#d1d1d1" Margin="185,274,20,294" Grid.ColumnSpan="2"/>
-        <Image Stretch="none" Source="Images/physical-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="190,310,0,0" Height="31" Grid.ColumnSpan="2"/>
-        <Image Stretch="none" Source="Images/magic-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="190,360,0,0" Height="31" Grid.ColumnSpan="2" RenderTransformOrigin="0.575,-1.075"/>
-        <Image Stretch="none" Source="Images/lightning-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="190,410,0,0" Height="31" Grid.ColumnSpan="2"/>
-        <Image Stretch="none" Source="Images/fire-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="190,460,0,0" Height="31" Grid.ColumnSpan="2"/>
-        <Image Stretch="none" Source="Images/bleeding.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="190,510,0,0" Height="31" Grid.ColumnSpan="2"/>
+        <Rectangle HorizontalAlignment="Stretch" Fill="#e0e0e0" Margin="2,274,20,44" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Stretch" Fill="#d1d1d1" Margin="2,274,20,294" Grid.Column="1"/>
+        <Image Stretch="none" Source="Images/physical-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="7,310,0,0" Height="31" Grid.Column="1"/>
+        <Image Stretch="none" Source="Images/magic-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="7,360,0,0" Height="31" RenderTransformOrigin="0.575,-1.075" Grid.Column="1"/>
+        <Image Stretch="none" Source="Images/lightning-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="7,410,0,0" Height="31" Grid.Column="1"/>
+        <Image Stretch="none" Source="Images/fire-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="7,460,0,0" Height="31" Grid.Column="1"/>
+        <Image Stretch="none" Source="Images/bleeding.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="7,510,0,0" Height="31" Grid.Column="1"/>
 
-        <TextBlock x:Name="textBlock_Copy6" Margin="25,274,0,0"  Text="Offence" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy7" Margin="20,315,0,0"  Text="Physical" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy11" Margin="20,365,0,0"  Text="Magic" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy10" Margin="20,415,0,0"  Text="Lightning" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy9" Margin="25,465,0,0"  Text="Fire" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock_Copy8" Margin="20,515,0,0"  Text="Bleeding" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.863,8.95"/>
+        <TextBlock x:Name="textBlock_Copy6" Margin="61,275,0,0"  Text="Offence" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="20" Width="60"/>
+        <TextBlock x:Name="textBlock_Copy7" Margin="50,315,0,0"  Text="Physical" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="20" Width="60"/>
+        <TextBlock x:Name="textBlock_Copy11" Margin="50,365,0,0"  Text="Magic" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="20" Width="60"/>
+        <TextBlock x:Name="textBlock_Copy10" Margin="50,415,0,0"  Text="Lightning" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="20" Width="63"/>
+        <TextBlock x:Name="textBlock_Copy9" Margin="50,465,0,0"  Text="Fire" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" Height="20" Width="60"/>
+        <TextBlock x:Name="textBlock_Copy8" Margin="50,515,0,0"  Text="Bleeding" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.863,8.95" Height="20" Width="60"/>
 
-        <TextBlock x:Name="physAtk" HorizontalAlignment="Left" Margin="107,315,0,0" TextWrapping="Wrap" Text="{Binding totalPhysOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1" RenderTransformOrigin="0.509,1.183"/>
-        <TextBlock x:Name="magicAtk" HorizontalAlignment="Left" Margin="107,365,0,0" TextWrapping="Wrap" Text="{Binding totalMagicOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1" RenderTransformOrigin="-1.456,0.933"/>
-        <TextBlock x:Name="lightAtk" HorizontalAlignment="Left" Margin="107,415,0,0" TextWrapping="Wrap" Text="{Binding totalLightOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1"/>
-        <TextBlock x:Name="fireAtk" HorizontalAlignment="Left" Margin="107,465,0,0" TextWrapping="Wrap" Text="{Binding totalFireOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1"/>
-        <TextBlock x:Name="bleedAtk" HorizontalAlignment="Left" Margin="107,515,0,0" TextWrapping="Wrap" Text="{Binding totalBleedOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1"/>
+        <TextBlock x:Name="physAtk" HorizontalAlignment="Left" Margin="153,310,0,0" TextWrapping="Wrap" Text="{Binding totalPhysOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1" RenderTransformOrigin="0.509,1.183"/>
+        <TextBlock x:Name="magicAtk" HorizontalAlignment="Left" Margin="153,365,0,0" TextWrapping="Wrap" Text="{Binding totalMagicOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1" RenderTransformOrigin="-1.456,0.933"/>
+        <TextBlock x:Name="lightAtk" HorizontalAlignment="Left" Margin="153,415,0,0" TextWrapping="Wrap" Text="{Binding totalLightOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1"/>
+        <TextBlock x:Name="fireAtk" HorizontalAlignment="Left" Margin="153,469,0,0" TextWrapping="Wrap" Text="{Binding totalFireOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1"/>
+        <TextBlock x:Name="bleedAtk" HorizontalAlignment="Left" Margin="153,515,0,0" TextWrapping="Wrap" Text="{Binding totalBleedOff}" VerticalAlignment="Top" Width="19" Height="20" Grid.Column="1"/>
         <!--#endregion-->
 
     </Grid>

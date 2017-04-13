@@ -26,5 +26,9 @@ namespace DarkSoulsCalculator.Models
             this.poise = poise;
 
         }
+        public override string ToString()
+        {
+            return "" + physical + "," + fire + "," + magic + "," + lightning + "," + poise;
+        }
     }
 }
