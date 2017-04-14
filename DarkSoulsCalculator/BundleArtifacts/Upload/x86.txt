@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\bin\x86\Release\Upload\DarkSoulsCalculator_1.1.2.0_x86.appx
+SymbolPackage=C:\Users\Dillon\documents\visual studio 2015\Projects\DarkSoulsCalculator\DarkSoulsCalculator\AppPackages\DarkSoulsCalculator_1.1.2.0\DarkSoulsCalculator_1.1.2.0_x86.appxsym

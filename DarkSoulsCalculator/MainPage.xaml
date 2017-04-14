@@ -42,7 +42,7 @@
         <!--#endregion-->
 
         <!--#region Defence-->
-        <Rectangle HorizontalAlignment="Stretch" Fill="#e0e0e0" Margin="20,274,0,44"/>
+        <Rectangle HorizontalAlignment="Stretch" Fill="#e0e0e0" Margin="20,274,0,10"/>
         <Rectangle HorizontalAlignment="Stretch" Fill="#d1d1d1" Margin="20,274,0,294"/>
         <Image Stretch="none" Source="Images/physical-defence.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="25,310,0,0" Height="31"/>
         <Image Stretch="none" Source="Images/magic-defence.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="25,360,0,0" Height="31"/>
@@ -65,7 +65,7 @@
         <!--#endregion-->
 
         <!--#region Offence-->
-        <Rectangle HorizontalAlignment="Stretch" Fill="#e0e0e0" Margin="2,274,20,44" Grid.Column="1"/>
+        <Rectangle HorizontalAlignment="Stretch" Fill="#e0e0e0" Margin="2,274,20,10" Grid.Column="1"/>
         <Rectangle HorizontalAlignment="Stretch" Fill="#d1d1d1" Margin="2,274,20,294" Grid.Column="1"/>
         <Image Stretch="none" Source="Images/physical-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="7,310,0,0" Height="31" Grid.Column="1"/>
         <Image Stretch="none" Source="Images/magic-dmg.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="29" Margin="7,360,0,0" Height="31" RenderTransformOrigin="0.575,-1.075" Grid.Column="1"/>
