@@ -10,4 +10,5 @@ The project is used to calculating your total stats from armor/weapons, calculat
 #### How it works
 The Database is actually broken up into 2 different databases. One for Weapons, one for Armor. Armor and Weapons have different values, so they were seperated so they could be read in and seperated differently making them easier to format. Items have 5 number variables, as well as a name and a type. The types are what seperates the items. The items are read in and parsed using the `JSonParser` class, which reads in from the database and saves everything into a list, one for Offence and one for Defence. Items are binded to a dropdown box, seperating them by their type.
 
+[App](https://www.microsoft.com/en-ie/store/p/dark-souls-calculator/9nz5xcpr54d3)
 [Back-End](https://github.com/DillonWard/Mobile-Apps-Backend)
